@@ -58,6 +58,8 @@ enum ap_message {
     MSG_TERRAIN,
     MSG_BATTERY2,
     MSG_CAMERA_FEEDBACK,
+    MSG_DATA_TRANSMISSION_HANDSHAKE,	//hualiang
+    MSG_ENCAPSULATED_DATA,	//hualiang
     MSG_MOUNT_STATUS,
     MSG_OPTICAL_FLOW,
     MSG_GIMBAL_REPORT,
@@ -153,6 +155,8 @@ public:
     void send_autopilot_version(uint8_t major_version, uint8_t minor_version, uint8_t patch_version, uint8_t version_type) const;
     void send_local_position(const AP_AHRS &ahrs) const;
     void send_vibration(const AP_InertialSensor &ins) const;
+    void send_data_transmission_handshake() const;
+    void send_encapsulated_data() const;
 
     // return a bitmap of active channels. Used by libraries to loop
     // over active channels to send to all active channels    
