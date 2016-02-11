@@ -2557,6 +2557,7 @@
             <field type="uint16_t" name="packets">number of packets beeing sent (set on ACK only)</field>
             <field type="uint8_t" name="payload">payload size per packet (normally 253 byte, see DATA field size in message ENCAPSULATED_DATA) (set on ACK only)</field>
             <field type="uint8_t" name="jpg_quality">JPEG quality out of [1,100]</field>
+            <field type="uint64_t" name="time_usec">Timestamp (microseconds since UNIX epoch or microseconds since system boot)</field>
         </message>
         <message id="131" name="ENCAPSULATED_DATA">
             <field type="uint16_t" name="seqnr">sequence number (starting with 0 on every transmission)</field>
